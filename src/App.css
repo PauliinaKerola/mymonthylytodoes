@@ -65,7 +65,7 @@ body {
   font-size: 16px;
   justify-content: center;
   align-content: center;
-  float: left;
+  /* float: left; */
   color: white;
   font-family: "Edu NSW ACT Foundation";
 }
