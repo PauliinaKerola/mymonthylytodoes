@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { AddTask } from "./components/addTask";
 import teippi from "./assets/teippi.png";
 
-const API_URL = "https://monthly-todoapprg.azurewebsites.net/api/Todoes";
+const API_URL = "https://monthlytodoesappservice.azurewebsites.net/api/Todoes";
 
 function App() {
   const [todolist, setTodolist] = useState([]);

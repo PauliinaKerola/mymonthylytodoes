@@ -13,7 +13,7 @@ export const UpdateTask = ({ id }) => {
 
   const handleEdit = (id) => {
     axios
-      .get(`https://monthly-todoapprg.azurewebsites.net/api/Todoes/${id}`)
+      .get(`https://monthlytodoesappservice.azurewebsites.net/api/Todoes/${id}`)
       .then((res) => {
         setUpdateTask(res.data.title);
         setEditId(id);
@@ -24,7 +24,7 @@ export const UpdateTask = ({ id }) => {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `https://monthly-todoapprg.azurewebsites.net/api/Todoes/${editId}`,
+        `https://monthlytodoesappservice.azurewebsites.net/api/Todoes/${editId}`,
         {
           title: updateTask,
           id: editId,
