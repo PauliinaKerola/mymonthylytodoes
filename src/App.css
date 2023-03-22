@@ -1,38 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500;600&display=swap");
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  color: rgb(62, 60, 63);
+}
+
+#root {
+  background-color: #f0c60b;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .App {
+  width: 60vh;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .sticker {
+  position: relative;
+  top: 20px;
+  transform: rotate(-2deg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.taskBg {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 0.5px dashed rgb(184, 181, 181, 0.5);
+}
+
+.taskBg .taskName {
+  display: inline-block;
+  margin-left: 10px;
+  font-family: "Roboto";
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.taskNum {
+  display: inline-block;
+  margin-left: 8px;
+  background-color: rgb(101, 11, 185);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-content: center;
+  float: left;
   color: white;
+  font-family: "Edu NSW ACT Foundation";
 }
 
-.App-link {
-  color: #61dafb;
+.taskDone .taskName {
+  text-decoration: line-through;
+  opacity: 0.3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.taskDone .taskNum {
+  opacity: 0.3;
+}
+
+.yellow {
+  color: #f0c60b !important;
+  font-size: 20px;
+}
+
+.taskControls {
+  display: flex;
+  margin-left: auto; /* push the buttons to the right */
+  padding: 0; /* remove the padding from the button element */
+  cursor: pointer; /* add a pointer cursor to the button */
+}
+
+.taskControls i {
+  padding: 6px;
+  background: none; /* remove the button background */
+  color: rgb(62, 60, 63);
+}
+
+.taskControls i :hover {
+  color: #f0c60b;
+  border: none; /* remove the button border */
+  background: none;
+}
+
+.headline {
+  font-family: "Edu NSW ACT Foundation";
+  font-size: 60px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  color: rgb(62, 60, 63);
+}
+
+.fineline {
+  font-family: "Roboto";
+  font-size: 12px;
+  letter-spacing: 10px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.taskInput input {
+  border-radius: 5px;
+  border: solid;
+  border-width: 0.5px;
+  height: 40px;
+  width: 80%;
+  font-size: 14px;
+  padding-left: 10px;
+  border-color: rgb(184, 181, 181);
+}
+
+.modal-title {
+  color: rgb(62, 60, 63);
+}
+
+.modal-backdrop {
+  background-color: aqua;
+}
+
+.button-add {
+  background-color: rgb(101, 11, 185);
+  color: white;
+  border-radius: 5px;
+}
+
+.button-add :hover {
+  background-color: rgb(62, 7, 114);
+}
+
+.button-close {
+  background-color: rgb(124, 123, 123);
+  color: white;
+  border-radius: 5px;
+}
+
+.button-close :hover {
+  background-color: rgb(73, 72, 72);
+}
+
+.add-task-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
