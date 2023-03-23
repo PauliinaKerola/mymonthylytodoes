@@ -48,7 +48,7 @@ function App() {
   };
 
   const handleDelete = (id) => {
-    if (window.confirm("Are you sure you want to delete?") === true) {
+    if (window.confirm("Haluatko varmasti poistaa tämän tehtävän?") === true) {
       axios.delete(`${API_URL}/${id}`).then(() => {
         setTodolist(todolist.filter((task) => task.id !== id));
       });
